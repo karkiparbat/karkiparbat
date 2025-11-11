@@ -21,8 +21,8 @@ Here are some ideas to get you started:
 ---
 
 ### 💫 About Me  
-- 🔭 I’m currently working on **NepTrade Hub**  
-- 🌱 I’m learning **React, Tailwind CSS, Node.js, and MongoDB**  
+- 🔭 I’m currently working on "visual studio code"
+- 🌱 I’m learning **html,  CSS, javascript, and python**  
 - 💬 Ask me about **Dropshipping, Web Development, or Business Ideas**  
 - ⚡ Fun fact: I love creating online businesses and designing digital products  
 
@@ -50,34 +50,46 @@ Here are some ideas to get you started:
 
 ### 🐍 GitHub Contribution Snake  
 <p align="center">
-  <img src="https://raw.githubusercontent.com/karkiparbat/karkiparbat/output/github-contribution-grid-snake.svg" alt="snake animation" />
+  <img src="output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake">
+
 </p>
+name: Update GitHub Contribution Snake
 
----
+on:
+  push:
+    branches:
+      - main  
+  schedule:
+    - cron: '0 * * * *' 
+  workflow_dispatch: 
 
-⭐️ **From [karkiparbat](https://github.com/karkiparbat)**
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v3
+jobs:
+  update-snake:
+    runs-on: ubuntu-latest
 
-  - name: Set up Python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.x'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-  - name: Install dependencies
-    run: pip install matplotlib numpy requests pillow
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-  - name: Generate snake SVG
-    run: python .github/scripts/generate_snake_svg.py
+      - name: Install dependencies
+        run: pip install matplotlib numpy requests pillow
 
-  - name: Commit and Push
-    run: |
-      git config --local user.email "github-actions[bot]@users.noreply.github.com"
-      git config --local user.name "github-actions[bot]"
-      git add output/github-contribution-grid-snake.svg
-      git commit -m "Update contribution snake" || echo "No changes to commit"
-      git push
+      - name: Generate snake SVG
+        run: python .github/scripts/generate_snake_svg.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add output/github-contribution-grid-snake.svg
+          git commit -m "Update contribution snake" || echo "No changes to commit"
+          git push
+
 
 
 
