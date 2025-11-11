@@ -58,16 +58,82 @@ Here are some ideas to get you started:
 ⭐️ **From [karkiparbat](https://github.com/karkiparbat)**
 name: Update GitHub Contribution Snake
 
+# Run garne har ek ghanta
 on:
   schedule:
-    - cron: '0 * * * *' # Every hour run
+    - cron: '0 * * * *' # har ek ghanta run garne
   workflow_dispatch:
 
 jobs:
   update-snake:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install matplotlib numpy requests pillow
+
+      - name: Generate snake SVG
+        run: python .github/scripts/generate_snake_svg.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add output/github-contribution-grid-snake.svg
+          git commit -m "Update contribution snake" || echo "No changes to commit"
+          git push
+Romanized notes:
+
+har ek ghanta run garne → run every hour
+
+Generate snake SVG → snake ko SVG generate garne
+
+Commit and Push → commit ra push garne
+
+Yo workflow har ek ghanta run garera tapai ko GitHub contribution snake update garne cha.
+
+Ma chai yesto version pani banauna sakchu jun push garda turunt run hunchha, testing ko lagi ramro huncha. Tapai lai banau?
+
+
+
+
+
+
+
+You said:
+hunxa banara dau
+
+
+
+ChatGPT said:
+Thik cha! Ma tapaiko GitHub Contribution Snake workflow ko version banai dinchu, jun push garda turunt run hunchha (manual testing ko lagi perfect). Yo workflow har ek ghanta schedule pani cha, ani push garda pani run hunchha:
+
+yaml
+Copy code
+name: Update GitHub Contribution Snake
+
+on:
+  push:
+    branches:
+      - main  
+  schedule:
+    - cron: '0 * * * *' 
+  workflow_dispatch: 
+
+jobs:
+  update-snake:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
