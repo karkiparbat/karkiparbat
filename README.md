@@ -149,13 +149,13 @@ SubElement(grid, 'rect', x=str(x), y=str(y), width=str(CELL), height=str(CELL), 
 centers.append((x+CELL/2, y+CELL/2))
 
 
-# === SNAKE PATH === #
+
 path_d = ' '.join([('M' if i == 0 else 'L') + f"{x:.1f},{y:.1f}" for i, (x, y) in enumerate(centers)])
 path_id = 'snakePath'
 SubElement(svg, 'path', id=path_id, d=path_d, fill='none', stroke='none')
 
 
-# === SNAKE === #
+
 snake = SubElement(svg, 'g', id='snake')
 SubElement(snake, 'circle', cx='0', cy='0', r='6', fill='#ff9933', stroke='#cc5500', stroke_width='1.2')
 anim = SubElement(snake, 'animateMotion', dur='12s', repeatCount='indefinite')
