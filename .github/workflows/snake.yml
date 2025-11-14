@@ -5,7 +5,7 @@ on:
     - cron: "0 */12 * * *"
   push:
     branches:
-      - main
+      - output
   workflow_dispatch:
 
 permissions:
@@ -25,10 +25,10 @@ jobs:
           github_user_name: karkiparbat
           outputs: dist/snake.svg
 
-      - name: Push snake to main branch
+      - name: Push snake to output branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main
+          branch: output
           folder: dist
           clean: true
           single-commit: true
