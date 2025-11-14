@@ -25,10 +25,10 @@ jobs:
           github_user_name: karkiparbat
           outputs: dist/snake.svg
 
-      - name: Push snake to output branch
+      - name: Push snake to main branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: output
+          branch: main
           folder: dist
           clean: true
           single-commit: true
