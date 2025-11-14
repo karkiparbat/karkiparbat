@@ -2,8 +2,8 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # हर 12 घण्टामा auto update
-  workflow_dispatch:         # manually run गर्न मिल्छ
+    - cron: "0 */12 * * *"  
+  workflow_dispatch:        
 
 jobs:
   build:
