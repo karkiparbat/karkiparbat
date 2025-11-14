@@ -1,1 +1,30 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # हर 12 घण्टामा auto update
+  workflow_dispatch:         # manually run गर्न मिल्छ
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate snake
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate snake.svg
+        uses: Platane/snk@v3
+        with:
+          github_user_name: karkiparbat
+          outputs: |
+            ./output/github-contribution-grid-snake.svg
+            ./output/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push to main branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main
+          folder: main
 
