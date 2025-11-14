@@ -47,6 +47,9 @@ Here are some ideas to get you started:
 </p>
 
 ---
+## 🐍 My GitHub Contribution Snake
+![snake gif](https://github.com/karkiparbat/karkiparbat/blob/output/github-contribution-grid-snake.svg)
+
 
 
 
