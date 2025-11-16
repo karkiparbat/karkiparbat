@@ -50,7 +50,7 @@ A passionate learner & developer from Nepal 🇳🇵
 </p>
 
 ---
-<p align="cennter"> ## 🐍 My Contribution Snake
+ ## 🐍 My Contribution Snake
 ![snake animation](./dist/snake.svg)
 
 
