@@ -20,13 +20,13 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: karkiparbat
-          outputs: |
+          main: |
             dist/github-contribution-grid-snake.svg
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          target_branch: output
+          target_branch: main
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
