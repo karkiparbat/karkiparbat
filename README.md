@@ -50,45 +50,8 @@ A passionate learner & developer from Nepal 🇳🇵
 </p>
 
 ---
-
-# Hi there 👋
-
 ## 🐍 GitHub Contribution Snake
 ![snake animation](./dist/snake.svg)
-name: Generate Snake Animation
-
-on:
-  schedule:
-    - cron: "0 */12 * * *"   # updates every 12 hours
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-permissions:
-  contents: write     # 🔥 mandatory (fixes commit/push error)
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Generate snake.svg
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: dist/snake.svg
-
-      - name: Commit and push snake.svg
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add dist/snake.svg
-          git commit -m "🐍 Update snake animation" || echo "No changes to commit"
-          git push
 
 
 
