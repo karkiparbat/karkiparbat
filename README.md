@@ -53,3 +53,9 @@ A passionate learner & developer from Nepal 🇳🇵
 
 ## 🐍 GitHub Contribution Snake  
 ![snake gif](https://github.com/karkiparbat/karkiparbat/blob/output/github-contribution-grid-snake.svg)
+## 🐍 GitHub Contribution Snake
+![snake animation](./dist/snake.svg)
+
+
+
+
