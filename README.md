@@ -8,8 +8,8 @@ A passionate learner & developer from Nepal 🇳🇵
 
 ### 🚀 About Me  
 - 🔭 Currently working on **Web Projects & GitHub Automation**  
-- 🌱 Learning **JavaScript, React, Tailwind, Firebase**  
-- 💬 Ask me about **Coding, GitHub, Automation, Free Fire Sensitivity**  
+- 🌱 Learning **JavaScript, Html,css,python**  
+- 💬 Ask me about **Coding, GitHub, Automation**  
 - ⚡ Fun fact: **Errors fear me 😎**
 
 ---
