@@ -31,4 +31,4 @@ jobs:
           branch: output
           folder: dist
           clean: true
-          single-commit: true
+          single-commit: true 
