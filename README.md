@@ -36,10 +36,12 @@ A passionate learner & developer from Nepal 🇳🇵
 
 ---
 <p>
-## ⚡ Stats
 
-![karkiparbat's GitHub stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=karkiparbat&show_icons=true&theme=tokyonight)
-</p>
+# ⚡ Stats  
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=karkiparbat&theme=tokyonight&hide_border=true" />
+</p> 
+
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=karkiparbat&show_icons=true&theme=tokyonight&hide_border=true" />
